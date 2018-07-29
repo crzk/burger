@@ -1,0 +1,69 @@
+.review__list{
+    background: #000;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.review__hover{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#141414, 0.7);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.review__item{
+    position: relative;
+    height: 50%;
+    width: 25%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    filter: grayscale(100%);
+   
+    &:hover{
+        .review__hover{
+            visibility: visible;
+            opacity: 1;
+            transition: 0.5s;
+        }
+    }
+}
+
+.review__desc{
+    width: 85%;
+    padding-top: 50px;
+    padding-left: 21px;
+    line-height: 2;
+}
+
+.review__title{
+    font-family: 'gagalin';
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.review__text{
+    font-size: 14px;
+    font-weight: 200;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.btn--bg_black{
+    max-width: 116px;
+    padding: 11px 17px;
+    background: #2f3234;
+    transition: 0.3s;
+    
+    &:hover{
+        background: #1f2122;
+        transition: 0.3s;
+    }
+}
