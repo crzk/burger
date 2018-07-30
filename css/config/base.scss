@@ -72,13 +72,13 @@ footer{
     margin-bottom: 0;
     
     &--color{
-        &_gray{
+        &-gray{
             color: $gray;
         }
     }
 
     &--align{
-        &_center{
+        &-center{
             text-align: center;
         }
     }
