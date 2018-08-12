@@ -11,10 +11,10 @@
     left: 5%;
 }
 
+
 .menu-accordeon {
     position: absolute;
     display: flex;
-    
     top: 0;
 	right: 0;
 	bottom: 0;
@@ -22,15 +22,25 @@
 
 .menu-accordeon__item {
     height: 100%;
+    display: flex;
 
 	&.menu-active {
-		.menu-accordeon__link-text {
+
+        .menu-accordeon__link-text {
 			color: $yellow;
         }
+
         .menu-accordeon__content{
-            width: 540px;
+            width: rem(540px);
             transition: .5s;
+
+            @include tablets{
+                width: 100%;
+                transition: 0s;
+            }
+
         }
+
         .menu-accordeon__text{
             display: flex;
         }
@@ -49,9 +59,8 @@
     position: relative;
 
     @include tablets{
-        width: rem(40px);
+        width: rem(60px);
     }
-    
 }
 
 .menu-accordeon__link-text {
@@ -75,7 +84,11 @@
 	background: rgba(#2f3234, .93);
     width: 0;
     transition: .5s;
-	overflow: hidden;
+    overflow: hidden;
+    
+    @include tablets{
+        transition: 0s;
+    }
 }
 
 .menu-accordeon__text {
@@ -87,4 +100,14 @@
 	width: 100%;
     line-height: 2;
     display: none;
+}
+
+.phones-close{
+    padding-top: 10px;
+    padding-right: 10px;
+    display: none;
+
+    @include tablets{
+       display: block;
+    }
 }
