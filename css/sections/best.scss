@@ -8,6 +8,11 @@
     display: flex;
     align-items: flex-start;
     text-align: center;
+    
+    @include phones{
+        flex-direction: column;
+    }
+    
 }
 
 .best__item{
@@ -15,27 +20,39 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 rem(10px);
+    
+    @include phones{
+        flex-direction: row;
+    }
 }
 
 .best__pic{
-    margin-bottom: 35px;
+    margin-bottom: rem(35px);
     height: 5rem;
 }
 
 .best__img{
     max-height: 100%;
     max-width: 100%;
+    @include phones{
+        max-width: rem(100px);
+    }
 }
 
 .best__title{
-   margin-bottom: 120px;
+   margin-bottom: rem(120px);
 }
 
 .best__subtitle{
     color: #000;
-    font-size: 24px;
-    margin-bottom: 12px;
+    font-size: rem(24px);
+    margin-bottom: rem(12px);
+}
+.best__desc{
+    @include phones{
+        text-align: left;
+    }
 }
 .best__text{
     font-weight: 100;

@@ -1,6 +1,7 @@
 /*CONFIG*/
 @import 'config/var.scss';
 @import 'config/mixins.scss';
+@import 'config/media.scss';
 @import 'config/fonts.scss';
 @import 'config/base.scss';
 
@@ -12,7 +13,7 @@
 @import 'sections/team.scss';
 @import 'sections/menu.scss';
 @import 'sections/review.scss';
-@import 'sections/delivery.scss';
+@import 'sections/order.scss';
 @import 'sections/contacts.scss';
 
 /*BLOCKS*/
