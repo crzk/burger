@@ -1,0 +1,42 @@
+.best{
+    background-image: url(../img/bg/best-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.best__list{
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.best__item{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.best__pic{
+    margin-bottom: 35px;
+    height: 5rem;
+}
+
+.best__img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.best__title{
+   margin-bottom: 120px;
+}
+
+.best__subtitle{
+    color: #000;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+.best__text{
+    font-weight: 100;
+}

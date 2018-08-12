@@ -1,0 +1,131 @@
+html,body{
+    height: 100%;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.42;
+    font-family: 'ubuntu';
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin-top: 0;
+    font-weight: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    li{
+        list-style: none;
+    }
+}
+
+footer{
+    position: relative;
+    width: 100%;
+}
+
+.wrap{
+    position: relative;
+    width: 100%;
+    min-width: 940px +20px;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.section{
+    height: 100vh;
+    min-height: 650px;
+}
+
+.container{
+    margin: 0 auto;
+    height: 100%;
+    width: 940px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title{
+    font-family: 'gagalin';
+    font-size: 72px;
+    color: $yellow;
+    margin-bottom: 0;
+    
+    &--color{
+        &-gray{
+            color: $gray;
+        }
+    }
+
+    &--align{
+        &-center{
+            text-align: center;
+        }
+    }
+}
+
+.subtitle{
+    font-family: 'lifehack';
+    font-size: 65px;
+    color: #fff;
+    line-height: 1.1;
+}
+
+.side-nav__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 125px;
+    right: 45px;
+    width: 10px;
+    height: 170px;
+}
+
+.side-nav__item{
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+.side-nav__link{
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    
+    &:hover:before{
+        content: "";
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border: 1px solid #fff;
+    }
+}
