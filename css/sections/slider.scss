@@ -41,31 +41,69 @@
     top: 50%;
 }
 
-.slider__content{
+.slider__item{
     display: flex;
+    flex-direction: row;
     flex: 1;
-    align-items: center;
-    flex-direction: column;
+    align-items: center; 
+    @include tablets{
+        flex-direction: column;
+    } 
+}
+
+.slider__list{
+    justify-content: flex-start;
 }
 
 .slider__left {
     position: relative;
-}
-
-.slider__pic{
-    width: 50%;
+    flex: 1;
+    height: rem(450px);
+    margin-right: rem(30px);
+    display: flex;
+    align-items: center;
 }
 
 .slider__img{
+    padding-top: 12%;
     max-width: 100%;
     max-height: 100%;
 }
-
 
 .slider__ingredients{
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.slider__ingredients{
+    background-color: $orange;
+    width: rem(90px);
+    height: rem(90px);
+    border-radius: rem(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    cursor: pointer;
+    &:hover{
+        background-color: $red;
+        transition: .5s;
+    }
+    &.slider__ingredients-active{
+
+        .ingredients__more{
+            left: 100%;
+        }
+    }
+}
+
+.ingredients__title{
+    font-family: 'gagalin';
+    text-transform: uppercase;
+    font-size: rem(14px);
+    color: #fff;
 }
 
 .ingredients__img{
@@ -77,16 +115,127 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    @include tablets{
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: auto;
+    }
 }
 
 .calories__img{
     width: rem(60px);
     height: rem(60px);
+    opacity: 0.5;
 }
 
-.calories__text{
+.ingredients__more{
+    background-color: rgba($color: #fff, $alpha: 0.9);
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    width: rem(270px);
+    border-radius: rem(10px);
+    padding: rem(20px);
+    margin-left: rem(5px);
+    
+    @include phones{
+        padding-top: rem(35px);
+    }
+    
+}
+
+.ingredients__item{
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(10px);
+}
+
+.ingredients__icon{
+    width: rem(44px);
+    height: rem(39px);
+}
+
+.ingredients__name{
+    font-family: 'ubuntu';
+    font-weight: 500;
+    margin-left: 10%;
+}
+
+.ingredients__quantity{
+    margin-left: auto;
+}
+
+.calories__number{
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 35%;
     transform: translateX(-50%);
+    font-family: 'gagalin';
+    font-size: rem(20px);
+    color: rgba($color: #fff, $alpha: 0.5);
+}
+
+.calories__units{
+    text-align: center;
+    font-family: 'gagalin';
+    font-size: rem(14px);
+    color: rgba($color: #fff, $alpha: 0.5);
+}
+
+
+.ingredients-close{
+    display: none;
+    @include phones{
+       display: block;
+       position: absolute;
+       top: 5px;
+       right: 5px;
+    }
+}
+
+/*right*/
+
+.slider__right {
+    position: relative;
+    flex: 1;
+    height: rem(450px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider__title{
+    line-height: 1;
+    margin-bottom: rem(40px);
+}
+
+.slider__desc{
+    color: #fff;
+    margin-bottom: rem(30px);
+}
+
+.slider__order{
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+.slider__price{
+    display: flex;
+    align-items: flex-end;
+    line-height: 0.9;
+    color: $red;
+    font-family: 'gagalin';
+    margin-right: rem(30px);
+}
+
+.price__units{
+    font-size: rem(72px);
+}
+
+.price__currency{
+    font-size: rem(30px);
+    margin-left: rem(5px);
 }
