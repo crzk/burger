@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <v class="wrap">
+    <div class="wrap">
         <section class="section burger">
             <div class="container burger__container">
                 <header class="header">
@@ -43,7 +43,7 @@
                         </ul>
                     </nav>
                     <a href="#" class="btn">Заказать</a>
-                    <a class="hamburger-menu-link" href="">
+                    <a class="hamburger-menu-btn" id="menuOpen" href="#">
                         <div class="hamburger-menu-link__bars"></div>
                     </a>
                 </header>
@@ -596,7 +596,40 @@
                 <a href="#" class="side-nav__link"></a>
             </li>
         </ul>
-    </v>
+        <div class="hamburger-menu" id="hamburgerMenu">
+            <div class="hamburger-menu__header">
+                <div class="logo">
+                    <svg class="logo__pic">
+                        <use xlink:href="img/icons/sprite/sprite.svg#logo"></use>
+                    </svg>
+                </div>
+                <a href="#" class="hamburger-menu-close" id="menuClose">
+                    <img src="img/icons/close.png" alt="" class="hamburger-menu-close__img">
+                </a>
+            </div>
+            <ul class="hamburger-menu__list">
+                <li class="hamburger-menu__item">
+                    <a href="#" class="hamburger-menu__link">о нас</a>
+                </li>
+                <li class="hamburger-menu__item">
+                    <a href="#" class="hamburger-menu__link">бургеры</a>
+                </li>
+                <li class="hamburger-menu__item">
+                    <a href="#" class="hamburger-menu__link">команда</a>
+                </li>
+                <li class="hamburger-menu__item">
+                    <a href="#" class="hamburger-menu__link">меню</a>
+                </li>
+                <li class="hamburger-menu__item">
+                    <a href="#" class="hamburger-menu__link">отзывы</a>
+                </li>
+                <li class="hamburger-menu__item">
+                    <a href="#" class="hamburger-menu__link">контакты</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
