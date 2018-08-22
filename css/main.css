@@ -566,7 +566,8 @@ footer {
   top: 0;
   width: 16.875rem;
   border-radius: 0.625rem;
-  padding: 1.25rem; }
+  padding: 1.25rem;
+  z-index: 50; }
   @media screen and (max-width: 480px) {
     .ingredients__more {
       padding-top: 2.1875rem; } }
