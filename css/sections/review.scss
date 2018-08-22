@@ -70,9 +70,11 @@
     font-weight: 200;
     color: #fff;
     margin-bottom: rem(30px);
+    line-height: rem(22px);
 
     @include tablets{
         margin-bottom: rem(10px);
+        
     }
 
     @include phones{
