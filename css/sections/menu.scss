@@ -11,7 +11,6 @@
     left: 5%;
 }
 
-
 .menu-accordeon {
     position: absolute;
     display: flex;
@@ -110,4 +109,11 @@
     @include tablets{
        display: block;
     }
+}
+
+.menu-item--hide{
+    @include phones{
+        display: none;
+    }
+    
 }

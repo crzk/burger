@@ -54,7 +54,7 @@
         .team-accordeon__member{
             display: flex;
             height: 100%;
-            transition: .5s;
+            
         }   
     }
 }
@@ -98,7 +98,7 @@
 .team-accordeon__member{
     height: 0;
     overflow: hidden;
-    transition: .5s;
+    
 
     @include tablets{
         flex-direction: column;
