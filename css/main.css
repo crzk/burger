@@ -1281,9 +1281,11 @@ footer {
   height: 1.25rem; }
 
 /*BLOCKS*/
-body.body-active-menu {
-  overflow: hidden; }
-
+/*body {
+    &.body-active-menu{
+        overflow: hidden;
+    }
+}*/
 .hamburger-menu {
   background-color: #2f3234;
   position: absolute;
