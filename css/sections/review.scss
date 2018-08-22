@@ -25,7 +25,13 @@
     background-position: center center;
     background-size: cover;
     filter: grayscale(100%);
-   
+
+    @include tablets{
+        width: 50%;
+        height: 25%;
+        text-align: center;
+    }
+
     &:hover{
         .review__hover{
             visibility: visible;
@@ -37,28 +43,46 @@
 
 .review__desc{
     width: 85%;
-    padding-top: 50px;
-    padding-left: 21px;
+    padding-top: 15%;
+    padding-left: 10%;
     line-height: 2;
+    
+    @include tablets{
+        padding-top: 5%;
+        padding-left: 0;
+        margin: 0 auto;
+    }
 }
 
 .review__title{
     font-family: 'gagalin';
-    font-size: 14px;
+    font-size: rem(14px);
     text-transform: uppercase;
     color: #fff;
+
+    @include phones{
+        font-size: rem(24px);
+    }
 }
 
 .review__text{
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: 200;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: rem(30px);
+
+    @include tablets{
+        margin-bottom: rem(10px);
+    }
+
+    @include phones{
+        display: none;
+    }
 }
 
 .btn--bg_black{
-    max-width: 116px;
-    padding: 11px 17px;
+    max-width: rem(116px);
+    padding: rem(11px) rem(17px);
     background: #2f3234;
     transition: 0.3s;
     

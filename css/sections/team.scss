@@ -1,0 +1,134 @@
+.team{
+    background-image: url(../img/bg/team-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.team__side{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: rgba($gray, .93);
+    height: 100%;
+    width: 50%;
+
+    @include tablets{
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.team__content{
+    position: absolute;
+    top: rem(112px);
+    left: rem(98px);
+}
+
+.team__title{
+    margin-bottom: rem(30px);
+}
+
+.team-accordeon__item{
+    margin-bottom: rem(40px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &.team-active {
+		.team-accordeon__link {
+			color: $yellow;
+
+			&:before {
+				transform: rotate(180deg);
+			}
+        } 
+        .team-accordeon__member{
+            display: flex;
+            height: 100%;
+            transition: .5s;
+        }   
+    }
+}
+.team-accordeon__link{
+	font-family: 'gagalin';
+    font-size: rem(14px);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;  
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: rem(20px);
+    margin-left: rem(25px);
+    position: relative;
+    
+    &:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: rem(-25px);
+		top: rem(5px);
+		width: 0;
+        height: 0;
+    }
+    
+	&:before {
+		border-top: rem(9px) solid $yellow;
+		border-left: rem(6px) solid transparent;
+		border-right: rem(6px) solid transparent;
+		border-bottom: rem(0px) solid transparent;
+		transform: rotate(0deg);
+		transition: .3s;
+    }
+    
+    @include tablets{
+        font-size: rem(24px);
+    }
+	
+}
+
+.team-accordeon__member{
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+
+    @include tablets{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.team-accordeon__title{
+    font-family: 'ubuntu';
+    font-weight: 700;
+    font-size: rem(14px);
+    color: #fff;
+}
+
+.team-accordeon__text{
+    
+    font-family: 'ubuntu';
+    font-weight: 300;
+    font-size: rem(14px);
+    color: #fff;
+}
+
+.team-accordeon__pic {
+    text-align: center;
+    margin-right: rem(20px);
+    
+    @include tablets{
+        margin-right: 0;
+        margin-bottom: rem(10px);
+    }
+}
+
+.team-accordeon__img {
+	width: rem(100px);
+	height: rem(100px);
+	background-size: cover;
+	border-radius: 50%;
+}
