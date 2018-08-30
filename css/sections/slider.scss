@@ -56,19 +56,27 @@
 .slider__item{
     display: flex;
     flex-direction: row;
-    align-items: center; 
-    flex: 1;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+       
     @include tablets{
         flex-direction: column;
     } 
 }
 
-.slider__list{
-    display: flex;
-    
+.slider__container{
+    overflow: hidden;
 }
 
-
+.slider__list{
+    display: flex;
+    left: -100%;
+    transition: 0.7s;
+    
+    position: relative;
+    
+}
 
 .slider__left {
     position: relative;

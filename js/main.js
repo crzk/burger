@@ -1,10 +1,11 @@
-//hamburger menu 
 
 let menu = document.querySelector('#hamburgerMenu');
 let openButton = document.querySelector('#menuOpen');
 let closeButton = document.querySelector('#menuClose');
 let body = document.querySelector('body');
 let menuOption = document.querySelectorAll('.hamburger-menu__link')
+
+//hamburger menu 
 
 openButton.addEventListener('click', function(e){
     e.preventDefault();
@@ -26,38 +27,72 @@ for (var i = 0; i < menuOption.length; i++) {
     })
 }
 
-//widgets
+//hamburger menu end
 
-//team & menu accordeons 
-let teamAcco = document.querySelector('.team-accordeon');
-let menuAcco = document.querySelector('.menu-accordeon');
-let phonesClose = document.querySelector('.phones-close');
-let menuContent = document.querySelector('.menu-accordeon__content');
-let menuItem = document.querySelector('.menu-accordeon__item');
+//team accordeon 
+let teamAccordeon = function(){  
 
-teamAcco.addEventListener('click', function(e){
-    e.preventDefault();
-    if (e.target.nodeName === 'A'){
-        e.target.parentNode.classList.toggle('team-active')
-    }
-})
-
-menuAcco.addEventListener('click', function(e){
-    e.preventDefault();
+    let teamLink = document.querySelectorAll('.team-accordeon__link');
     
-    if (e.target.nodeName === 'A'){
-        e.target.parentNode.classList.toggle('menu-active')
-    }
+    teamLink.forEach(function(teamMember){
+        
+        teamMember.addEventListener('click', function(e){
+            e.preventDefault();
+            let activeTeamMember = document.querySelector('.team-accordeon__item.team-active');
 
-    if(e.target.nodeName === 'DIV'){
-        e.target.parentNode.parentNode.classList.toggle('menu-active')
-    }
+            if (activeTeamMember){
+                activeTeamMember.classList.remove('team-active');
+            }
+            if (!activeTeamMember || activeTeamMember.querySelector('.team-accordeon__link') !== this){
+            this.closest('.team-accordeon__item').classList.add('team-active');
+            }
+        })
+    })
+}
+teamAccordeon();
+//team accordeon end
 
-    if(e.target.nodeName === 'IMG'){
-        e.target.parentNode.parentNode.parentNode.classList.toggle('menu-active')
-    }
+//menu accordeon
+let menuAccordeon = function(){  
 
-})
+    let menuLink = document.querySelectorAll('.menu-accordeon__link');
+    
+    menuLink.forEach(function(menuCategory){
+        
+        menuCategory.addEventListener('click', function(e){
+            e.preventDefault();
+            let activeMenuCategory = document.querySelector('.menu-accordeon__item.menu-active');
+
+            if (activeMenuCategory){
+                activeMenuCategory.classList.remove('menu-active');
+            }
+
+            if (!activeMenuCategory || activeMenuCategory.querySelector('.menu-accordeon__link') !== this){
+                this.closest('.menu-accordeon__item').classList.add('menu-active');
+            }
+        })
+    })
+}
+menuAccordeon();
+
+let menuAccordeonClose = function(){  
+
+    let menuCloseButton = document.querySelectorAll('.phones-close');
+    
+    menuCloseButton.forEach(function(closeLink){
+        
+        closeLink.addEventListener('click', function(e){
+            e.preventDefault();
+            let activeMenuCategory = document.querySelector('.menu-accordeon__item.menu-active');
+
+            if (activeMenuCategory){
+                activeMenuCategory.classList.remove('menu-active');
+            }
+        })
+    })
+}
+menuAccordeonClose();
+//menu accordeon end
 
 
 //slider

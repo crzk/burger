@@ -23,6 +23,12 @@
     height: 100%;
     display: flex;
 
+    &.mobile-hide{
+        @include phones{
+            display: none;
+        }
+    }
+    
 	&.menu-active {
 
         .menu-accordeon__link-text {
@@ -56,6 +62,8 @@
 	background-repeat: no-repeat;
 	text-decoration: none;
     position: relative;
+
+   
 
     @include tablets{
         width: rem(60px);
@@ -109,11 +117,4 @@
     @include tablets{
        display: block;
     }
-}
-
-.menu-item--hide{
-    @include phones{
-        display: none;
-    }
-    
 }
